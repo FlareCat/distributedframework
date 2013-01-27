@@ -1,0 +1,191 @@
+#################################################
+#
+#
+#
+#           Distributed Application
+#
+#
+#################################################
+#Team Name
+#	ZERG
+#Team Members
+#
+# 1. D.Avinash Reddy
+# 2. Anish Ramaswamy
+# 3. B.Yuvraj
+#
+#
+###################################################
+
+AppIDE
+---------------------------------------------------
+FILES LIST
+-----------
+	  headers/
+		:-headers contain all the headers 
+required and port numbers for udp and tcp 
+connection.
+	  Processing Details/
+		:-It contain algorithm and required 
+chunks to be process. Algorithm are compiled and 
+linked with library then saved as (.o) file. 
+
+	  src/ 
+		:- source code directory contain 
+all .c files including make file.
+	   
+FUNCTION LIST
+-------------
+	
+	logInit(l): This function create a logfile.txt 
+and update all the status.
+
+	sendProcessingDetails():Function used to send 
+the algorithm and chunk details to the Middleware 
+which inturn divides the chunkfile and assigns job to
+ each node in distributed environment.
+
+	openTCPClientSocket(): Function to create 
+a Client Socket, Connect with Server with provided 
+details and return Socket File Descriptor.
+----------------------------------------------------
+----------------------------------------------------
+####################################################
+----------------------------------------------------
+
+Middleware
+----------------------------------------------------
+FILE LIST
+---------
+	 headers/
+                :-headers contain all the headers
+required and port numbers for udp and tcp
+connection.
+
+	 src/
+                :- source code directory contain
+all .c files including make file.
+    
+	Application Details/
+		:- It all the data recived from the 
+appIDE layer including chunk details.
+
+	NodeDetails/
+		:- This directory contain details 
+about the available nodes in the distributed 
+environment.
+
+
+FUNCTION LIST
+-------------
+
+        logInit(l): This function create a logfile.txt
+and update all the status.
+
+	pthread_create(): Function used to create the 
+thread process and make it concorrent process. 
+
+	algo_TCPtoServer():This is used to get the 
+library file to be executed on the nodes and a 
+configuration file which contains that the program has 
+to be executed in the no of nodes in parallel and 
+the chunk ids used by the application.
+
+	divide_chunks():Divide the chunks between multiple 
+nodes.
+
+	getTotalChunks():To get total no of chunks
+available.
+
+	void *broadcast_send():Send the Broadcast 
+Packets at Regular Intervals.
+
+	void* broadcast_recieve():To revieves the reply
+ for the Broadcast Packet.
+
+	void *send_algoData():Function used to send the
+data between middleware to distributed network.
+
+	openTCPServerSocket(): To create a server side 
+socket connection between middleware to distributed.
+
+	openTCPClientSocket(): To create a client side 
+socket connection between middleware to distributed.
+
+----------------------------------------------------
+----------------------------------------------------
+####################################################
+----------------------------------------------------
+
+DistributedEnv
+----------------------------------------------------
+FILE LIST
+---------
+         headers/
+                :-headers contain all the headers
+required and port numbers for udp and tcp
+connection.
+
+         src/
+                :- source code directory contain
+all .c files including make file and executable files.
+
+        Application Details/
+                :- This Directory contain the list of 
+chunkid needed for the execution.
+
+	bin/
+		:- It contain .a files which has to be 
+executed using the chunk.
+
+	chunk /
+		:- Chunks contain what are all the chunks
+present in that node.If all chunks are presrnt then it 
+execute otherwise it will broadcast for the missing chunks.
+
+
+FUNCTION LIST
+-------------
+
+        logInit(l): This function create a logfile.txt
+and update all the status.
+
+        pthread_create(): Function used to create the
+thread process and make it concorrent process.
+
+	void *UDPtoServer():It is used to establish a 
+UDP connection to broadcast for missing chunkid.
+
+	void *TCPtoServer():Function create a TCP 
+connection between the nodes.
+   
+	openTCPServerSocket(): To create a server side
+socket connection between middleware to distributed.
+
+        openTCPClientSocket(): To create a client side
+socket connection between middleware to distributed.
+	
+	void createBinary():This function is call to
+execute the algorithm.
+
+	FILE *getChunk(char *chunkID):To check for required
+chunks are present othervice broadcast the chunkID.
+
+	void broadcastSend():This Function Broadcast the 
+given chunkid using UDP socket connection.
+
+	int tcpServertoNodes():It create a nonblocking TCP
+socket and ready to accept a socket connection between the 
+nodes.
+
+	int openTCPNonblockingServerSocket():This TCP 
+Server  create an nonblocking tcp socket to transmit the 
+required chunks between two nodes and saved them in their 
+Directory .
+
+	      
+---------------------------------------------------------
+---------------------------------------------------------
+#########################################################
+---------------------------------------------------------
+

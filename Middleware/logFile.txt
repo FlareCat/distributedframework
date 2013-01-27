@@ -1,0 +1,48 @@
+Server online. Waiting for a client...
+Connection established with 127.0.0.1
+Received : !<arch>
+/               1356343676  0     0     0       14        `
+
+Received : SUCCESS_ALGO_CHUNKS
+Broadcast recieved from 192.168.12.78..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.76..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.76..Establishing TCP connection to send the details
+Cannot open Chunks file. No such file or directory
+Server online. Waiting for a client...
+Connection established with 127.0.0.1
+Received : !<arch>
+/               1356343676  0     0     0       14        `
+
+Received : SUCCESS_ALGO_CHUNKS
+Broadcast recieved from 192.168.12.78..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.76..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.78..Establishing TCP connection to send the details
+Cannot open Chunks file. No such file or directory
+Server online. Waiting for a client...
+Connection established with 127.0.0.1
+Received : !<arch>
+/               1356607980  0     0     0       14        `
+
+Received : SUCCESS_ALGO_CHUNKS
+Broadcast recieved from 192.168.12.76..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.86..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.79..Establishing TCP connection to send the details
+Cannot open Chunks file. No such file or directory
+Server online. Waiting for a client...
+Connection established with 127.0.0.1
+Received : !<arch>
+/               1356607980  0     0     0       14        `
+
+Received : SUCCESS_ALGO_CHUNKS
+Broadcast recieved from 192.168.12.79..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.76..Establishing TCP connection to send the details
+Opening a TCP client socket.
+Created a socket.Connected to the created socket.Broadcast recieved from 192.168.12.78..Establishing TCP connection to send the details
+Cannot open Chunks file. No such file or directory
